@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Odin";
+    src: url(/font/Norse-Bold.otf)
+}
+
+h1 {
+    font-family: "Odin";
+    font-size: 78px;
+    color: white;
+}
+
+h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+p, a {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-image: url(image/philipbjarnstig_A_landscape_photograph_of_a_borean_tundra_on_a__6865a1dc-439b-4631-a67e-9015ec5f8a46.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 350px;
+    display: flex;
+}
+
+section {
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    width: 63%;
+    margin-left: auto;
+    height: 100%;
+}
+
+.section-top {
+    padding: 150px 100px 45px 45px;
+}
+
+
+.sign-up-form {
+    background-color: white;
+    padding: 20px 45px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.sign-up-form form {
+    display: flex;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.form-right, .form-left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+.form-right input:not(:last-of-type),
+.form-left input:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 4px;
+    width: 80%;
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid blue;
+    box-shadow: 2px 2px 5px grey;
+    outline: none;
+}
+
+input[type="password"]:invalid {
+    border: 1px solid red;
+    color: #D55C5F;
+    box-shadow: none;
+}
+
+.pwd-error {
+    color: red;
+    font-size: 12px;
+}
+
+label {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #545454;
+    letter-spacing: 1px;
+    margin-bottom: 1px;
+    display: block;
+}
+
+.section-bottom {
+    padding: 30px 45px;
+}
+
+button {
+    padding: 13px 45px;
+    background-color: #596D48;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 1px 1px 10px darkgray;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    scale: 1.05;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.section-bottom-text-wrap {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.odin-logo {
+    position: relative;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 37%;
+    top: 20vh;
+    height: 15.5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.odin-logo img {
+    height: 12vh;
+}
+
