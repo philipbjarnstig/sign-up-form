@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sign-up form</title>
+</head>
+<body>
+    <main>
+        <div class="odin-logo">
+            <img src="image/odin-lined.png" alt="the odin project logotype">
+            <h1>ODIN</h1>
+        </div>
+        <section>
+            <div class="section-top">
+                <h3>
+                    This is not a real online service! You know you need something like this in your life to help realize your deepest dreams. <br> Sign up now to get started. <br><br> You <em> know </em> you want to.
+                </h3>
+            </div>
+            <div class="sign-up-form">
+                <h3>Let's do this!</h3>
+                <form action="" method="get">
+                    <div class="form-left">
+                        <label for="f_name">FIRST NAME</label>
+                        <input type="text" name="f-name" id="f_name" />
+
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email" />
+
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password" required>
+                        <span id="pwdMatch" class="pwd-error"></span>
+                    </div>
+
+                    <div class="form-right">
+                        <label for="l_name">LAST NAME</label>
+                        <input type="text" name="l_name" id="l_name">
+
+                        <label for="pone_nmr">PHONE NUMBER</label>
+                        <input type="number" name="phone_nmr" id="phone_nmr">
+
+                        <label for="password_confirm">CONFIRM PASSWORD</label>
+                        <input type="password" name="password_confirm" id="password_confirm" required>
+                    </div>
+                </form>
+            </div>
+            <div class="section-bottom">
+                <button>Create Account</button>
+                <div class="section-bottom-text-wrap">
+                    <p>Already have an account?</p>
+                    <a href="#">Log in</a> 
+                </div>               
+            </div>
+        </section>
+    </main>
+    
+
+    <script>
+        const passwordInput = document.getElementById("password");
+        const confirmPassword = document.getElementById("password_confirm");
+        const pwdMatch = document.getElementById("pwdMatch");
+
+        confirmPassword.addEventListener("input", function() {
+            if (passwordInput.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity("Passwords do not match");
+                pwdMatch.textContent = "*Passwords do not match";
+            }
+            else {
+                confirmPassword.setCustomValidity("");
+                pwdMatch.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>
